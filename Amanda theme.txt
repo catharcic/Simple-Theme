@@ -1,0 +1,778 @@
+﻿<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#">
+
+<title>SORRY, JUNIOR.</title>
+
+<head>
+
+<link rel="shortcut icon" href="http://techblog.wimgodden.be/favicon.ico">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+
+<!--
+
+  \  |    \     ___|    \     \  | |   |  \  | ____| |   |
+ |\/ |   _ \  \___ \   _ \   |\/ | |   |   \ | __|   |   |
+ |   |  ___ \       | ___ \  |   | |   | |\  | |     ___ |
+_|  _|_/    _\_____/_/    _\_|  _|\___/ _| \_|_____|_|  _|
+
+CODED BY masamuneh.tumblr.com / masamoon.co.vu
+
+-->
+
+<title>{Title}</title>
+
+<!-- META TAGS -->
+
+<meta name="color:Background" content"#545151"/>
+<meta name="color:Text" content="#1f1f1f"/>
+<meta name="color:Link" content="#000000"/>
+<meta name="color:LinkHov" content="#979090"/>
+<meta name="color:Bold" content="##979090"/>
+<meta name="color:Italic" content="#979090"/>
+
+<meta name="image:background" content=""/>
+<meta name="image:home bar" content=""/>
+
+<!-- JAVASCRIPT -->
+
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+//
+$('a.poplight[href^=#]').click(function() {
+var popID = $(this).attr('rel'); //Get Popup Name
+var popURL = $(this).attr('href'); //Get Popup href to define size
+var query= popURL.split('?');
+var dim= query[1].split('&');
+var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img src="http://i47.tinypic.com/mawh08.png" class="btn_close" alt="Close" width= "15px" /></a>');
+var popMargTop = ($('#' + popID).height() + 80) / 2;
+var popMargLeft = ($('#' + popID).width() + 80) / 2;
+//Apply Margin to Popup
+$('#' + popID).css({
+'margin-top' : -popMargTop,
+'margin-left' : -popMargLeft
+});
+$('body').append('<div id="fade"></div>');
+$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'})
+return false;
+});
+$('a.close, #fade').live('click', function() {
+$('#fade , .popup_block').fadeOut(function() {
+$('#fade, a.close').remove(); //fade them both out
+});
+return false;
+});
+});
+</script>
+
+<link href="#s-m-t-tooltip" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script type="text/javascript" src="http://static.tumblr.com/7qjmkr5/IUmmdsy41/jquery.style-my-tooltips.js"></script>
+<script>
+     (function($){
+         $(document).ready(function(){
+             $("[title]").style_my_tooltips();
+         });
+     })(jQuery);
+ </script>
+ 
+<script language=JavaScript>
+function clickIE4(){
+if (event.button==2){
+alert(message);
+return false;
+}
+}
+
+function clickNS4(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){
+alert(message);
+return false;
+}
+}
+}
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=clickNS4;
+}
+else if (document.all&&!document.getElementById){
+document.onmousedown=clickIE4;
+}
+document.oncontextmenu=new Function("return false")
+</script>
+
+<script language=JavaScript>
+var message=""; function clickIE4(){ if (event.button==2){
+alert(message); return false;
+} 
+}
+function clickNS4(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){ alert(message); return false;
+}
+}
+}
+if (document.layers)
+document.captureEvents(Event.MOUSEDOWN); document.onmousedown=clickNS4;
+} else if (document.all&&!document.getElementById){
+document.onmousedown=clickIE4;
+} document.oncontextmenu=new Function("return false")
+</script>
+
+<link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+
+<link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+ 
+<style type="text/css">
+
+/* ----- BASIC -----*/
+
+::-webkit-scrollbar {
+background-color: #dde1e9;
+height: 4px;
+width: 3px;
+border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+background-color: #475649;
+height: 50px;
+border-radius: 12px;
+}
+
+::selection {
+text-shadow: 1px 1px .5px #1f1f1f;
+}
+ 
+::-moz-selection {
+text-shadow: 1px 1px .5px #1f1f1f;
+}
+
+*, body, a, a:hover {
+cursor: url(http://static.tumblr.com/dywzt2f/fWbngla9v/mouse.png), auto;
+}
+
+sub, sup, small {
+font-size: 14px;
+line-height: 120%;
+}
+
+big {
+font-family: 'Press Start 2P', cursive;
+font-size: 12px;
+}
+
+b, strong {
+font-size: 20px;
+font-weight: bold;
+color: {color:Bold};
+}
+
+i, em {
+font-size: 18px;
+letter-spacing: 1px;
+color: {color:Italic};
+}
+
+u, underline {
+text-decoration: underline;
+border-bottom: 1px {color:Text};
+}
+
+pre {
+white-space: pre-wrap;
+word-wrap: break-word;
+font-size: 9px;
+background-color: rgba();
+padding:5px 2px 5px 20px;
+}
+
+figure {
+padding-top: 12px;
+padding-bottom: 12px;
+}
+
+object {
+background-color: transparent !important;
+}
+
+#s-m-t-tooltip {
+background: #dde1e9;
+font-size: 10px;
+color: #364f40;
+letter-spacing: 2px;
+padding-left: 6px;
+padding-right: 4px;
+margin-left: 6px;
+margin-top: 6px;
+max-width: 300px;
+z-index: 9999999;
+}
+
+a {
+text-decoration: none;
+outline: none;
+color: {color:Link};
+-moz-transition-duration: 0.5s;
+-webkit-transition-duration: 0.5s;
+-o-transition-duration: 0.5s;
+}
+ 
+a:hover {
+color: {color:LinkHov};
+cursor: url('http://cur.cursors-4u.net/others/oth-6/oth589.cur'), auto;
+}
+ 
+img {
+border:none;
+}
+ 
+blockquote {
+border-left: solid 2px #475649;
+padding-left: 10px;
+padding-top: 4px;
+padding-bottom: 4px;
+margin: 0;
+}
+   
+blockquote blockquote {
+border-left: dashed 2px #475649;
+padding-left: 10px;
+padding-top: 4px;
+padding-bottom: 4px;
+margin: 0;
+}
+ 
+h1, h2 {
+font-family: 'Press Start P2', cursive;
+font-weight: bold;
+font-size: 18px;
+text-align: center;
+line-height: 160%;
+letter-spacing: 2px;
+text-transform: normal;
+color: {color:Text};
+}
+
+iframe#tumblr_controls { 
+white-space:nowrap; 
+-webkit-filter: invert(100%); 
+-moz-filter: invert(100%); 
+-o-filter: invert(100%); 
+-ms-filter: invert(100%); 
+filter: invert(100%); 
+opacity:.2;transition: .8s ease-in-out; 
+-webkit-transition: .8s ease-in-out;
+-moz-transition: .8s ease-in-out;
+-o-transition: .8s ease-in-out; 
+}
+
+/*----- BODY -----*/
+ 
+body {
+background-color: {color:Background};
+margin: 0px;
+color: {color:Text};
+font-family: 'VT323';
+font-size: 16px;
+font-weight: bold;
+line-height : 120%;
+background-image: url({image:Background});
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+ 
+#fern {
+width: 400px;
+padding-bottom: 5px;
+margin-top: 25px;
+margin-right: 20px;
+text-shadow: 1px 1px .5px #;
+padding-bottom: 60px;
+}
+ 
+#heather {
+width: 405px;
+margin-left: 750px;
+margin-top: 80px;
+margin-bottom: 40px;
+position:absolute;
+height: auto;
+}
+ 
+ 
+#acacia {
+color:{color:Text};
+position:fixed;
+width:90px;
+height:auto;
+margin-top:250px;
+margin-left:290px;
+text-align:left;
+height:120%;
+}
+
+#chamomile {
+position: fixed;
+margin-top: 315px;
+margin-left: 85px;
+font: times;
+font-size: 14px;
+font-weight: bold;
+text-transform: uppercase;
+z-index: 999;
+}
+ 
+#chamomile a {
+color: #081d9a;
+text-shadow: 0 0 4px #fff;
+-moz-transition-duration:.5s;
+-webkit-transition-duration:.5s;
+-o-transition-duration:.5s;
+}
+   
+#chamomile a:hover {
+color: #d3d3df;
+text-shadow: 0 0 4px #081d9a;
+-moz-transition-duration:.5s;
+-webkit-transition-duration:.5s;
+-o-transition-duration:.5s;
+}
+ 
+#dulcet {
+position: fixed;
+font-size: 12px;
+font-weight: bold;
+margin-top: 10px;
+margin-left: 100px;
+padding-top: 5px;
+text-align: justify;
+letter-spacing: 0px;
+line-height: 120%;
+z-index: 9999;
+}
+   
+#pagi {
+width: 350px;
+font-size: 10px;
+font-family: 'Press Start P2', cursive;
+font-style: normal;
+text-align: center;
+letter-spacing: 1px;
+text-transform: uppercase;
+margin-top: 300px;
+margin-left: 430px;
+padding-top: 5px;
+position: fixed;
+}
+   
+#pagi a {
+color: #767f78;
+}
+
+#pagi a:hover {
+text-decoration: underline;
+}
+   
+#ivy {
+background: #c76943;
+font-style: normal;
+font-size: 12px;
+text-align: center;
+letter-spacing: 20px;
+text-decoration: none;
+text-transform: uppercase;
+color: {color:Text};
+margin-top: 3px;
+width: 300px;
+padding: 5px;
+-moz-transition-duration:0.5s;
+-webkit-transition-duration:0.5s;
+-o-transition-duration:0.5s;
+}
+   
+.juniper {
+font-family: 'Press Start 2P', cursive;
+font-size: 6px;
+font-weight: bold;
+line-height: 120%;
+text-decoration: none;
+text-shadow: 1px 1px #2d1265;
+word-wrap: break-word;
+text-transform: normal;
+text-align: center;
+padding-bottom: 12px;
+margin-left: 25px;
+width: 350px;
+}
+
+.juniper a {
+color: #6e796f;
+}
+   
+.juniper a:hover {
+color: #6e796f;
+-moz-transition-duration:.5s;
+-webkit-transition-duration:.5s;
+-o-transition-duration:.5s;
+}
+
+.bonsai {
+width: 350px;
+margin-left: 25px;
+font-size: 8px;
+text-align: center;
+}
+
+.bonsai a{
+color: #237e6f;
+}
+
+.stats {
+background: #c76943;
+}
+
+.playbutton {
+width: 20px; 
+height: 30px; 
+overflow: hidden; 
+position: relative;
+margin: 5px 13px -1px 2px;
+opacity: .4;
+z-index: 9;
+-webkit-transition-duration: 1.5s;
+-moz-transition-duration: 1.5s;
+-o-transition-duration: 1.5s;
+}
+
+.playbutton:hover {
+opacity: .5;
+}
+
+.playbox {
+background-color: #000; 
+position: absolute; 
+z-index: 1000;
+margin-top: 3px; 
+margin-left: 2px;
+opacity: .4;
+-webkit-transition-duration: 1.5s;
+-moz-transition-duration: 1.5s;
+-o-transition-duration: 1.5s;
+}
+
+.playbox:hover {
+opacity: .5;
+}
+
+.orion {
+position: left;
+width: 40px;
+height: 40px;
+z-index: 9;
+}
+
+.blegh {
+background-color: rgba(208,207,65,1);
+width: 300px;
+height: 40px;
+border-top-right-radius: 2px;
+border-bottom-right-radius: 20px;
+z-index: 9;
+}
+
+.concerto {
+font-family: 'Bangers';
+font-size: 18px;
+color: #945958;
+position: relative;
+margin-top: -54px;
+margin-left: 80px;
+}
+
+.symphonic {
+font-family: 'Amaranth', sans-serif;
+font-style: italic;
+font-size: 12px;
+color: #9e9e99;
+position: relative;
+margin-top: 4px;
+margin-left: 80px;
+}
+
+.wonderwall {
+position: relative;
+margin-top: 40px;
+}
+
+.babet {
+font-size: 14px;
+font-weight: bold;
+width: 280px;
+margin-left: 10px;
+text-transform: none;
+text-align: center;
+line-height: 120%;
+white-space: pre-wrap;
+word-wrap: break-word;
+padding-bottom: 4px;
+}
+
+.babet a {
+color: #07168d;
+text-decoration: none;
+}
+
+.babet a:hover {
+text-decoration: underline;
+}
+   
+.query {
+font-size: 14px;
+text-align: center;
+text-transform: none;
+padding: 16px;
+line-height: 120%;
+border-top: 2px solid #09269e;
+border-top-right-radius: 6px;
+border-right: 2px solid #09269e;
+border-bottom: 2px solid #09269e;
+border-bottom-right-radius: 20px;
+}
+   
+.bullshit {
+text-align:left;
+padding:6px;
+color:{color:Text};
+}
+
+#saith {
+font-size: 18px;
+line-height: 120%;
+text-align: center;
+border-top-right-radius: 20px;
+border-bottom-left-radius: 20px;
+padding-top: 20px;
+padding-right: 20px;
+padding-left: 20px;
+padding-bottom: 20px;
+margin-top: 100px;
+}
+
+#descrip {
+font-family: 'Press Start 2P', cursive;
+font-size: 8px;
+color: #6e796f;
+text-shadow: 1px 1px #2d1265, -1px -1px #7e857f;
+background: #dde1e9;
+margin-top: 325px;
+margin-left: 180px;
+width: 50px;
+height: 20px;
+position: fixed;
+overflow: hidden;
+padding-top: 10px;
+text-align: center;
+z-index: 2;
+-webkit-transition: all .5s ease;
+-moz-transition: all .5s ease;
+-o-transition: all .5s ease;
+transition: all .5s ease;
+}
+
+#descrip:hover {
+height: 50px;
+width: 50px;
+-webkit-transition: all .5s ease;
+-moz-transition: all .5s ease;
+-o-transition: all .5s ease;
+transition: all .5s ease;
+}
+
+.descrip_content {
+padding: 10px;
+text-align: justify;
+line-height: 120%;
+}
+
+/*----- DO NOT CLAIM AS YOUR OWN. -----*/
+
+#masamune {
+font-size:8px;
+font-family:cambria;
+font-style:italic;
+margin-bottom: -10px;
+margin-right: -10px;
+color:#000000;
+letter-spacing:1px;
+background-color:#545151;
+-moz-transition-duration:0.5s;
+-webkit-transition-duration:0.5s;
+-o-transition-duration:0.5s;
+}
+
+#masamune a {
+background-color:{color:Credit BG};
+padding:5px;
+position:fixed;
+right:10px;
+bottom:10px
+}  
+ 
+#masamune a:hover {
+color:#999999;
+}
+
+/*----- DO NOT CLAIM AS YOUR OWN. -----*/
+
+.hyacinth {
+text-align:left;
+}
+
+
+/*----- HTML -----*/
+
+{CustomCSS}
+</style></head>
+<body>
+
+<div style="position: fixed; margin-top: 220px; margin-left: 45px; z-index: 1;">
+<a href="http://ripjunior.tumblr.com/"><img src="{image:home bar}"/></a>
+</div>
+
+<div id="pagi">
+{block:Pagination}
+{block:PreviousPage}
+<a href="{PreviousPage}">↞</a>
+{/block:PreviousPage}
+{block:JumpPagination length="3"}
+{block:CurrentPage}
+<span class="current_page">{PageNumber}</span>
+{/block:CurrentPage}
+{block:JumpPage}
+<a class="jump_page" href="{URL}">{PageNumber}</a>
+{/block:JumpPage}
+{/block:JumpPagination}
+{block:NextPage}
+<a href="{NextPage}">↠</a>
+{/block:NextPage}
+{/block:Pagination}
+</div>
+
+<div id="chamomile">
+    <a href="/"></a>&nbsp;
+    <a href="/ask"></a>&nbsp;
+    <a href="/bushido"></a>&nbsp;
+    <a href="/dragon.lord"></a>
+</div>
+
+<div id="dulcet">
+<p>{Description}</p>
+</div>
+
+<div id="descrip"><div id="deco">HOVER</div>
+<div class="descrip_content" style="margin-left: 5px;">
+<object type="application/x-shockwave-flash" data="http://flash-mp3-player.net/medias/player_mp3_maxi.swf" width="20" height="20">
+    <param name="movie" value="http://flash-mp3-player.net/medias/player_mp3_maxi.swf" />
+    <param name="bgcolor" value="#dde1e9" />
+    <param name="FlashVars" value="mp3=https%3A//dl.dropboxusercontent.com/s/f0ytztjber6yinn/Equilibrium.mp3&amp;width=20&amp;loop=1&amp;autoplay=1&amp;volume=50&amp;showslider=0&amp;buttonwidth=20&amp;sliderwidth=0&amp;sliderheight=0&amp;volumewidth=0&amp;volumeheight=0&amp;loadingcolor=&amp;bgcolor1=dde1e9&amp;bgcolor2=dde1e9&amp;slidercolor1=&amp;slidercolor2=&amp;sliderovercolor=&amp;buttoncolor=2d1265&amp;buttonovercolor=2d1265&amp;textcolor=" />
+</object>
+</div>
+</div>
+
+<div id="heather">{block:Posts}<div id="fern">
+ 
+{block:Text}
+<h1>{block:Title}
+{Title}
+{/block:Title}</h1>
+{Body}
+{/block:Text}
+ 
+{block:Photo}
+<div class="photo" style="text-align:center;">{LinkOpenTag}<img src="{PhotoURL-400}">{LinkCloseTag}</div>
+{block:Caption}{Caption}{/block:Caption}
+{/block:Photo}
+ 
+{block:Photoset}
+<div class="photo" style="text-align:center;">{Photoset-400}</div>
+{block:Caption}{Caption}{/block:Caption}
+{/block:Photoset}
+ 
+{block:Quote}
+<div id="saith">{Quote}</div>
+{block:Source}<p><div style="text-align:right;">— {Source}</p></div>{/block:Source}
+{/block:Quote}
+
+{block:Link}
+<h1 style="font-family:'Bangers";><a href="{URL}" {Target}>{Name}</a></h1>
+{block:Description}{Description}{/block:Description}
+{/block:Link}{hw}
+ 
+{block:Chat}
+{block:Title}<h1>{Title}</h1>{/block:Title}
+{block:Lines}{block:Label}<b>{Label}</b>{/block:Label} {Line}<br>{/block:Lines}
+{/block:Chat}
+ 
+{block:AudioPlayer}
+<div class="playbox"><div class="playbutton">{AudioPlayerBlack}</div></div>
+{block:AlbumArt}
+<div class="blegh"><img src="{AlbumArtURL}" class="orion"></div>
+{/block:AlbumArt}
+{block:TrackName}<div class="concerto" style="margin-top: -35px;">{TrackName}</div>{/block:TrackName}
+{block:Artist}<div class="symphonic">{Artist}</div>{/block:Artist}
+{block:PlayCount}<div class="statistics" style="margin-top: 6px;">{PlayCount}&nbsp; TIMES PLAYED.</div>{/block:PlayCount}
+{block:Caption}<div class="wonderwall" style="margin-top: 5px;">{Caption}</div>{/block:Caption}
+{/block:AudioPlayer}
+ 
+{block:Video}
+<div style="text-align:center;">{Video-400}</div>
+{block:Caption}{Caption}{/block:Caption}
+{/block:Video}
+ 
+{block:Answer}
+<div class="babet_bg">
+<div class="babet">a letter from {Asker};</div>
+</div>
+<div class="query">{Question}</div>
+<div class="bullshit">{Answer}</div>
+{/block:answer}
+
+
+<div class="juniper" style="margin-top: 10px;">
+<div style="margin-top: 10px; padding-top: 6px; margin-bottom: 10px; font-size: 14px; text-transform: uppercase;">
+{block:Date}<a href="{Permalink}">{DayOfMonth}{DayOfMonthSuffix} OF {Month}</a>{/block:Date} 
+</div>
+</div>
+
+{block:PermalinkPage}
+<div class="bonsai">
+{block:HasTags}
+{block:Tags}<a href="{TagURL}">{Tag}</a>&nbsp;&nbsp;&nbsp; {/block:Tags}
+{/block:HasTags}
+</div>
+{/block:PermalinkPage}
+
+</div>
+
+{/block:Posts}
+
+{block:PostNotes}{PostNotes}{/block:PostNotes}
+
+</div>
+ 
+</div>
+
+</body>
+
+<body onselectstart="return false;" ondragstart="return false;">
+
+<div id="masamune"><a href="http://masamoon.co.vu/"><img src="http://i.imgur.com/g8wFdSI.png" style="margin-bottom: -15px; margin-right:-10px;"/></a></div></div></div>
+
+</html>
